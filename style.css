@@ -1,0 +1,76 @@
+body{
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 200px;
+    color: azure;
+    background-image: url(./img/187101.jpg) ;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+#second{
+    display: none;
+}
+#div{
+    display: none;
+}
+
+
+h1{
+    color: gray;
+    padding: 20px;
+}
+
+span{
+    color: #b63e23;
+    font-weight: 700;
+    font-size: 25px;
+}
+h2{
+    padding: 20px;
+}
+
+
+.form{
+    margin: 10px 0 50px;
+}
+
+.submit{
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #b63e23;
+    color: azure;
+}
+
+
+.inputNumber{
+    padding: 10px 20px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+.btn_1{
+    padding: 10px 20px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: #b63e23;
+    color: azure;
+}
+h3{
+    font-size: 25px;
+    color: green;
+    padding: 10px;
+}
+
+h5{
+    font-size: 25px;
+}
+.desc{
+    padding: 15px;
+    letter-spacing: 1px;
+}
