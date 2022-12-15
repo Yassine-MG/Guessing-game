@@ -55,7 +55,7 @@ do{
     btn.addEventListener("click",()=>{   
         if(inputNumber.value == number){
             gameOver();
-            h3.innerText = "you thought the Game Is Over"
+            h3.innerText = "Next Step"
             h5.innerText = "Go Next Level Or Die"
             audio[0].play();
         }else if(i < 3){
