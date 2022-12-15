@@ -58,9 +58,9 @@ do{
             h3.innerText = "Next Step"
             h5.innerText = "Go Next Level Or Die"
             audio[0].play();
-        }else if(i < 3){
+        }else if(i < chances){
             h4.innerText = "try again";
-        }else if( i == 3 ) {
+        }else if( i == chances ) {
             gameOver();
             h3.innerText = "Game Over !!"
             h3.style.color = "red";
