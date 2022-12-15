@@ -24,6 +24,11 @@ function restart(){
 }  
 window.onload = audio[2].play();
 
+// document.addEventListener('DOMContentLoaded',()=>{
+//     audio[2].play();
+//     // console.log("text");
+// });
+
 function testValue(){
         if(inputs[0].checked){
             document.querySelector(".desc").innerHTML = "Enter a number btw 1 and 10 You have 3 chances to guess the right number" ;
@@ -59,7 +64,12 @@ do{
             h5.innerText = "Go Next Level Or Die"
             audio[0].play();
         }else if(i < chances){
-            h4.innerText = "try again";
+            if(inputNumber.value< number){
+                h4.innerText = "saisissez un nombre plus grands";
+            }else if(inputNumber.value> number){
+                h4.innerText = "saisissez un nombre plus petit";
+            }
+            
         }else if( i == chances ) {
             gameOver();
             h3.innerText = "Game Over !!"
