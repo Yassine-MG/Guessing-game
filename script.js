@@ -15,19 +15,17 @@ let h5 = document.querySelector("h5");
 let h4 = document.querySelector("h4");
 let div = document.querySelector(".div");
 let audio = document.querySelectorAll("audio");
+let restart = true;
+let h6 = document.querySelector("h6");
 function gameOver(){
     document.getElementById("first").style.display = "none";
     document.getElementById("second").style.display = "block";
 }
-function restart(){
+function restarts(){
     location.reload();
 }  
 window.onload = audio[2].play();
 
-// document.addEventListener('DOMContentLoaded',()=>{
-//     audio[2].play();
-//     // console.log("text");
-// });
 
 function testValue(){
         if(inputs[0].checked){
@@ -47,15 +45,16 @@ function testValue(){
             document.getElementById("div").style.display="block";
         }
 };
- 
+ let cb;
 inputs.forEach((input,indice) => {
     inputs[indice].addEventListener("click",()=>{
         testValue(); 
         console.log(number , chances);    
-        return number,chances;
+        cb = chances;
+        return number,chances,cb;
     })
 });
-let i=1;
+let i = 1;
 do{
     btn.addEventListener("click",()=>{   
         if(inputNumber.value == number){
@@ -66,9 +65,12 @@ do{
         }else if(i < chances){
             if(inputNumber.value< number){
                 h4.innerText = "saisissez un nombre plus grands";
+                
             }else if(inputNumber.value> number){
                 h4.innerText = "saisissez un nombre plus petit";
+
             }
+            inputNumber.value = "";
             
         }else if( i == chances ) {
             gameOver();
@@ -77,13 +79,14 @@ do{
             h5.innerText = "You Die!!!"
             audio[1].play();
         }
-    i++ 
+    i++;
+    cb--;
+    h6.innerText = `il vous reste ${cb} chance` ;
     });
-    console.log(i) 
 }while(i<chances);
 
 btn_1.addEventListener("click",()=>{
-    restart();
+    restarts();
 });
 
 
